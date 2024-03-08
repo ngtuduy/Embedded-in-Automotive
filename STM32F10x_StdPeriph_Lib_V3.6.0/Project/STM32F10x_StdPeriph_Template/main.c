@@ -9,8 +9,8 @@
 int main(void)
 {
 
-    //NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x8002000);
-    //SCB->VTOR = (uint32_t)0x08002000;
+    NVIC_SetVectorTable(NVIC_VectTab_FLASH, 0x8002000);
+    SCB->VTOR = (uint32_t)0x08002000;
     
     init_led();
     USART1_Init(115200); 
